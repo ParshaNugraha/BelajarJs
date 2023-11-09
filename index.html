@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tombol Perubahan & Kalkulator</title>
+</head>
+<body>
+
+<button id="button" onclick="ubahTeks()">Klik ini</button>
+<br>
+<br>
+<input type="text" id="hasil" value="0">
+    <button onclick="kalkulasi()">Kalkulasikan</button>
+    <button onclick="reset()">Reset</button>
+
+<script>
+    function ubahTeks() {
+    var tombol = document.getElementById("button");
+    tombol.innerHTML = "Berubah";
+}
+
+function kalkulasi() {
+  var hasil = document.getElementById('hasil').value;
+
+  
+  var HasilKalkulasi = parseInt(hasil) * 2;
+
+  
+  document.getElementById('hasil').value = HasilKalkulasi;
+}
+
+function reset() {
+  
+  document.getElementById('hasil').value = 0;
+}
+
+</script>
+</body>
+</html>
